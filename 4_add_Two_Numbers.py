@@ -5,6 +5,22 @@
 # @File    : 4_add_Two_Numbers.py
 # @Software: PyCharm
 """
+print pow(2,3)
+
+'''
+可更改变量与不可更改对象
+nfoo = 1
+nfoo = 2
+
+lstFoo = [1]
+lstFoo[0] = 2
+
+a = [1,2]
+b = a
+b[0] = 10
+print a
+
+'''
 class ListNode(object):
     def __init__(self, x):
         self.val = x

@@ -49,7 +49,6 @@ def stringToListNode(input):
     for number in numbers:
         ptr.next = ListNode(number)
         ptr = ptr.next
-
     ptr = dummyRoot.next
     return ptr
 
