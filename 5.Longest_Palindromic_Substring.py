@@ -9,7 +9,7 @@
 对于回文子串，每增加一个字符，最多是加一或者加二
 这里需要注意的是 对于切片时最后一个不取
 '''
-
+# 动态规划的题
 
 class Solution:
     def longestPalindrome(self, s):
