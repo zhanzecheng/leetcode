@@ -8,6 +8,7 @@
 
 # 做到我吐的一题
 
+# TODO: check 1
 class Solution:
     # @param root, a tree link node
     # @return nothing

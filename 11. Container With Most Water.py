@@ -17,6 +17,11 @@
    0   1  2  3  4  5 ..  n     x
 '''
 
+# 核心思路是一个二分查找的题， 小的进行移动，直到重叠
+
+# TODO: check 1
+
+# use the clamp
 class Solution:
     def maxArea(self, height):
         """

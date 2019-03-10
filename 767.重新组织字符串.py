@@ -16,7 +16,7 @@ class Solution:
         :type S: str
         :rtype: str
         """
-
+        # 对字符的频次做一个统计，并有一个先决判断
         dic = {}
         for c in S:
             if c not in dic:

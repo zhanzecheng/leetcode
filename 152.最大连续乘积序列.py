@@ -7,6 +7,11 @@
 """
 # 超级漂亮。。。。。
 
+# 这一题一个是交换，一个是max
+# 挺难想的
+
+# TODO: check 1
+
 class Solution:
     def maxProduct(self, nums):
         """

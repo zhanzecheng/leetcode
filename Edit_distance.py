@@ -35,6 +35,7 @@ def minEditDist(sm, sn):
         for j in range(1, n):
             # 这里需要注意下 字符串是从下标0开始的
             cost = 0 if sm[i-1] == sn[j-1] else 1
+            # 对应着 添加 删除 替换
             matrix[i][j] = min(matrix[i - 1][j] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j - 1] + cost)
 
     return matrix[m - 1][n - 1]

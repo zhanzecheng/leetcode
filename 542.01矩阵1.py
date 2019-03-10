@@ -7,6 +7,8 @@
 """
 
 # 一个简单的循环方式来解决这个问题
+# 这一题的思路不错，用多次循环来计数
+# TODO: check 1
 class Solution:
     def updateMatrix(self, matrix):
         """

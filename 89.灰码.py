@@ -7,8 +7,23 @@
 """
 
 
-def grayCode(self, n):
-    results = [0]
-    for i in range(n):
-        results += [x + pow(2, i) for x in reversed(results)]
-    return results
+# 这个不懂
+
+# 这一题又是一个充满了trick的题目
+
+# TODO: check 1
+class Solution(object):
+    def grayCode(self, n):
+        results = [0]
+        for i in range(n):
+            print(results)
+            results += [x + pow(2, i) for x in reversed(results)]
+
+        return results
+
+
+
+if __name__ == '__main__':
+    solution = Solution()
+    n = 2
+    print(solution.grayCode(n))

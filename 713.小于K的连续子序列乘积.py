@@ -7,6 +7,7 @@
 """
 
 # 使用的方式是一个滑动的窗口来统计
+# TODO: check 1
 class Solution:
     def numSubarrayProductLessThanK(self, nums, k):
         """

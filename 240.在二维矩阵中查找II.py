@@ -5,6 +5,7 @@
 # @File    : 240.在二维矩阵中查找II.py
 # @Software: PyCharm
 """
+# 正确的思路应该是列 -- 行 ++
 class Solution:
     def searchMatrix(self, matrix, target):
         """

@@ -7,6 +7,10 @@
 """
 
 # 利用后序遍历的字符串看看字串是否有重复，并且用map来降低时间复杂度
+
+
+# 核心是用字符串来表示一颗数
+
 class Solution:
     def findDuplicateSubtrees(self, root):
         """

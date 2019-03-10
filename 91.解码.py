@@ -19,18 +19,26 @@ class Solution:
             return 0
 
         dp = [0] * (len(s) + 1)
+
         if s[0] == '0':
             return
+
         dp[0] = 1
         dp[1] = 1
+
+        #  dp[i] = dp[i-1] + dp[i-2]
+        #  define as s[i-1] != '0' and
+        #  s[i-2:] < '27' and s[i-2:i] > '09'
+
         for i in range(2, len(s) + 1):
             if s[i - 1] != '0':
                 dp[i] += dp[i-1]
             if s[i-2:i] < '27' and s[i-2:i] > '09':
                 dp[i] += dp[i-2]
+
         return dp[len(s)]
 
 if __name__ == '__main__':
     soluton = Solution()
-    data ="1212"
+    data ="101"
     print(soluton.numDecodings(data))

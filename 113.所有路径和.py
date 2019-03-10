@@ -6,7 +6,8 @@
 # @Software: PyCharm
 """
 
-
+# 这一题就是一个简单的dfs
+# TODO: check 1
 class TreeNode:
     def __init__(self, x):
         self.val = x

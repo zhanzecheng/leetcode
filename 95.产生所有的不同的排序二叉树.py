@@ -7,7 +7,13 @@
 """
 
 # TODO: 这个其实也不太会
+# TODO: 这一题是真的难！！
 # Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 class Solution:
     def generateTrees(self, n):
         """

@@ -17,12 +17,11 @@ class Solution:
         col = len(board[0])
         trace = [[0] * len(board[0]) for _ in range(len(board))]
 
-
-
         def dfs(i, j, word, c):
 
             if i < row and i >= 0 and j >= 0 and j < col and trace[i][j] != -1 and c < len(word):
                 trace[i][j] = -1
+                # 这里还是需要一个状态的回退
                 if word[c] == board[i][j]:
                     if c == len(word) - 1:
                         self.flag = True
@@ -40,6 +39,7 @@ class Solution:
 
                     return
             return
+        # 这一题需要从头到尾遍历
         for i in range(row):
             for j in range(col):
                 dfs(i, j, word, 0)

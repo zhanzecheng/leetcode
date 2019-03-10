@@ -15,13 +15,20 @@ class Solution:
         :rtype: bool
         """
 
-        for i in nums:
-            if i == target:
-                return True
-        return False
-
+        l = 0
+        h = len(nums) - 1
+        while l < h:
+            mid = (l + h) // 2
+            if nums[mid] > nums[h]:
+                l = mid + 1
+            else:
+                h = mid
+        print(l)
+        nums[:(len(nums)-l)],nums[(len(nums) - 1):] = nums[l:], nums[:l]
+        return nums
 if __name__ == '__main__':
     solution = Solution()
+    # data = [4, 5, 1, 2, 3 ]
 
     data = [2,2,2,0,2,2]
     print(solution.search(data, 2))

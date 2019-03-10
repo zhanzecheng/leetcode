@@ -23,7 +23,10 @@ class Solution:
         dp2 = [0] * length
         dp1[0] = 1
         for i in range(1, length):
+            # 还需要注意一下这里是 if else 的关系
             if A[i] <= A[i - 1] or B[i] <= B[i - 1]:
+                # 好奇葩
+                # 这个的思路还是很漂亮
                 dp1[i] = dp2[i - 1] + 1
                 dp2[i] = dp1[i - 1]
             elif A[i] <= B[i - 1] or B[i] <= A[i - 1]:

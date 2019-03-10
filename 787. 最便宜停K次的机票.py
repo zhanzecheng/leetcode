@@ -10,7 +10,8 @@
 
 import heapq
 
-
+# 直接来比较k次
+# 一道优先队列的好题
 class Solution:
     def findCheapestPrice(self, n, flights, src, dst, K):
         """
@@ -29,6 +30,7 @@ class Solution:
         heap = [(0, src, K + 1)]
         while heap:
             tmpc, tmps, tmpk = heapq.heappop(heap)
+            # 这里的终止判断也很重要
             if tmps == dst:
                 return tmpc
             if tmpk > 0:

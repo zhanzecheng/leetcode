@@ -6,7 +6,8 @@
 # @Software: PyCharm
 """
 
-
+# TODO: check 1
+# 每一个dfs有自己的visit，并且用了nums[i+1:]的形式来避免引用
 class Solution(object):
     def findSubsequences(self, nums):
         res = []
@@ -15,6 +16,7 @@ class Solution(object):
             if len(path) > 1:
                 res.append(path)
 
+            # 这里其实是每一个搜索有一个自己的visit
             visited = []
             for i in range(len(nums)):
                 if nums[i] in visited:

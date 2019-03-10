@@ -8,10 +8,7 @@
 
 class Solution:
 
-    def majorityElement(self, num, n):
-        self.result = -1
-        self.findK(num, n, 0, len(num) - 1)
-        return self.result
+
     def findK(self, num, k, l, h):
         if l <= h:
             split = self.partition(num, l, h)
@@ -37,7 +34,12 @@ class Solution:
         num[l] = cur
         return l
 
+    def majorityElement(self, num, n):
+        self.result = -1
+        self.findK(num, n, 0, len(num) - 1)
+        return self.result
+
 if __name__ == '__main__':
-    data = [16, 4, 1, 39, 23, 12]
+    data = [3,2,1,5,6,4]
     solution = Solution()
-    print(solution.majorityElement(data, 0))
+    print('--------> 中间大的数是： ', solution.majorityElement(data, len(data) // 2 - 1))

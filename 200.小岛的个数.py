@@ -6,6 +6,8 @@
 # @Software: PyCharm
 """
 
+# TODO: check 1 turn 1 to 0 and count
+
 class Solution:
     def numIslands(self, grid):
         """

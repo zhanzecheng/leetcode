@@ -6,7 +6,6 @@
 # @Software: PyCharm
 """
 
-
 class Solution:
     def swapPairs(self, head):
         """

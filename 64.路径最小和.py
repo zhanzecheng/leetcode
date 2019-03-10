@@ -7,6 +7,7 @@
 """
 
 # 动态规划
+# 这一道题倒是比较简单
 class Solution:
     def minPathSum(self, grid):
         """

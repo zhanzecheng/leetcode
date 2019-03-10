@@ -28,16 +28,39 @@ class Solution:
                 flag = False
                 # 这里使用二分查找来进行改进
                 l , h = 0, len(dp) - 1
-                while l <= h:
+                while l < h:
                     mid = (l + h) // 2
+                    print(l, h, mid)
                     if dp[mid] == nums[i]:
                         flag = True
                         break
                     elif dp[mid] > nums[i]:
-                        h = mid - 1
+                        h = mid
                     else:
                         l = mid + 1
                 if flag:
                     continue
                 dp[l] = nums[i]
         return len(dp)
+if __name__ == '__main__':
+    solution = Solution()
+    data = [10,9,2,5,3,7,101,18]
+    solution.lengthOfLIS(data)
+# 这个是另外一种解法
+"""
+
+class Solution:
+
+    def lengthOfLIS(self, nums):
+        if nums == []:
+            return 0
+        dp = [1] * len(nums)
+        for i in range(1, len(nums)):
+            dp[i] = 1
+            for j in range(i):
+                if nums[i] > nums[j]:
+                    dp[i] = max(dp[i], dp[j] + 1)
+
+        return max(dp)
+        
+"""

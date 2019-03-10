@@ -7,6 +7,11 @@
 """
 
 # TODO:想了半天，结果竟然是使用递归的方式来处理
+
+# TODO: check 1
+# TODO: check 2
+# 这题用递归是真是没有想到！！
+# 这一题的精髓是 return max(self.longestSubstring(t, k) for t in s.plit(c))
 class Solution:
     def longestSubstring(self, s, k):
         if len(s) < k:

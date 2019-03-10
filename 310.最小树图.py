@@ -6,6 +6,10 @@
 # @Software: PyCharm
 """
 # 这一道题使用了广度优先的搜索策略
+
+# 这题其实很有意思，也有新意
+# 这一题就是我没有复习到的一种， 对于图， 用队列
+
 from queue import Queue
 class Solution:
     def findMinHeightTrees(self, n, edges):

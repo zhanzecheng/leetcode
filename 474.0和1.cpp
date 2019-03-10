@@ -1,5 +1,5 @@
 
-
+// 这是一个背包问题，核心思路还是选择，但要注意这里是从大往小更新的
 
 int findMaxForm(vector<string>& strs, int m, int n) {
   vector<vector<int>> memo(m+1, vector<int>(n+1, 0));

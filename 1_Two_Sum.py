@@ -13,10 +13,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 '''
 
-a = [1,2]
-b = a
-b[0] = 10
-print a
+# TODO: check 1
 
 # here is my solution
 # O(n2)

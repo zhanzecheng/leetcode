@@ -7,6 +7,7 @@
 """
 
 # 这一题的思路真的很巧妙
+# 没错，这一题是使用平衡的方法来做的
 class Solution:
     def findMaxLength(self, nums):
         """

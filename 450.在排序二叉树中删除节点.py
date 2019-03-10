@@ -14,6 +14,10 @@
 #         self.left = None
 #         self.right = None
 
+# 这里使用root.left = xxx 这种形式来保存更改的值
+
+# TODO: check 1
+
 class Solution:
     def deleteNode(self, root, key):
         """
@@ -47,9 +51,10 @@ class Solution:
                     pre.left = cur.right
                 cur.right = root.right
                 cur.left = root.left
+                del root
                 return cur
                 # 左右子树都不为空
-                # 找到直接前驱， 替代 并删除前驱
+                # 找到直接后驱， 替代 并删除前驱
 
         elif root.val > key:
             root.left = self.deleteNode(root.left, key)

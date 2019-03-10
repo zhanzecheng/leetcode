@@ -11,7 +11,6 @@ class Solution:
     # @return nothing
     def connect(self, root):
         pre = root
-        cur = None
         while pre and pre.left:
             cur = pre
             while cur:

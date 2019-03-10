@@ -6,6 +6,8 @@
 # @Software: PyCharm
 """
 
+# 充分的利用堆栈的功能来做
+
 class Solution(object):
     def longestValidParentheses(self, s):
         """
@@ -24,6 +26,7 @@ class Solution(object):
                         stack.append(i)
                 else:
                     stack.append(i)
+
         if len(stack) == 0:
             return len(s)
         maxLen = 0

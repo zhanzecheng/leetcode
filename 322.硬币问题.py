@@ -8,6 +8,8 @@
 
 # 一个牛逼的dp算法，好题
 
+# O(amout * coins)
+# TODO: check 1
 class Solution(object):
     def coinChange(self, coins, amount):
         """

@@ -7,6 +7,10 @@
 """
 
 # 这个里面其实是包含了两个dfs
+
+# TODO: check 1
+
+# 这一题还是贼牛逼
 class Solution:
     def canPartitionKSubsets(self, nums_, k):
         """
@@ -22,25 +26,23 @@ class Solution:
         target = sum(nums_) // k
         visit = [0] * len(nums_)
 
-        def dfs(nums, visited, start_index, k, cur_sum, cur_number):
-
-            # 这个dfs太牛了
-            print(visit)
+        def dfs(nums, visited, start_index, k, cur_sum):
             if k == 1:
                 return True
-            if cur_sum == target and cur_sum > 0:
-                return dfs(nums, visited, 0, k-1, 0, 0)
+            if cur_sum == target:
+                return dfs(nums, visited, 0, k - 1, 0)
+            if cur_sum > target:
+                return False
 
             for i in range(start_index, len(nums)):
                 if visited[i] == 0:
                     visited[i] = 1
-                    if dfs(nums, visited, i+1, k, cur_sum+nums[i], cur_number + 1):
+                    if dfs(nums, visited, i + 1, k, cur_sum + nums[i]):
                         return True
                     visited[i] = 0
-
             return False
-        re = dfs(nums_, visit, 0, k, 0, 0)
-        return re
+
+        return dfs(nums_, visit, 0, k, 0)
 
 if __name__ == '__main__':
     solution = Solution()

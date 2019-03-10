@@ -6,6 +6,8 @@
 # @Software: PyCharm
 """
 
+# TODO: check 1
+
 # 在有数字的情况下，应该尽量想到哈希表
 class Solution:
     def maximumSwap(self, num):

@@ -22,6 +22,10 @@ rotate the input matrix in-place such that it becomes:
 ]
 '''
 
+# 解释的很好，先转置，再逆序
+# 确实充满了技巧
+# TODO: check1
+
 class Solution:
     """
     这个方法很变态，就是两步：先转置，再逆序

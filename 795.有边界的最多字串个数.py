@@ -6,6 +6,7 @@
 # @Software: PyCharm
 """
 
+# 这一题用一个count来保存连续增值
 
 class Solution:
     def numSubarrayBoundedMax(self, A, L, R):

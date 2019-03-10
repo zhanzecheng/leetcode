@@ -5,7 +5,6 @@
 # @File    : 4_add_Two_Numbers.py
 # @Software: PyCharm
 """
-print pow(2,3)
 
 '''
 可更改变量与不可更改对象

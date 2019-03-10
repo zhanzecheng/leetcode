@@ -10,6 +10,7 @@ class Solution:
     def subsets(self, nums):
         res = [[]]
         for num in sorted(nums):
+            print(res)
             tmp = [item+[num] for item in res]
             res = res + tmp
         result = []
@@ -20,6 +21,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    data = [1, 2, 2]
+    data = [1, 2, 3]
     solution = Solution()
     print(solution.subsets(data))

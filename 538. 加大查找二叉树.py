@@ -6,7 +6,7 @@
 # @Software: PyCharm
 """
 
-
+# 这一题的思路是中序访问，并且左右子树颠倒访问
 class TreeNode:
     def __init__(self, x):
         self.val = x

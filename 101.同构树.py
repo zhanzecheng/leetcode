@@ -6,7 +6,11 @@
 # @Software: PyCharm
 """
 
+# 这个可以先前序再中序
 
+# 还有一种优化算法就是只遍历一次，但是是左，右的顺序，加上判别是不是同一棵树的老套路
+
+# TODO: check 1
 class Solution:
     def isSymmetric(self, root):
         """

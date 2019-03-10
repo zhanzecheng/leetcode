@@ -6,6 +6,8 @@
 # @Software: PyCharm
 """
 
+
+# TODO: check 1
 # 这道题做的还是不错的，一遍AC
 
 # Definition for a binary tree node.

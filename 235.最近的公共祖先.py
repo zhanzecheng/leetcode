@@ -6,6 +6,29 @@
 # @Software: PyCharm
 """
 
+# 对于BST这么做是比较靠谱的
+"""
+
+def lowestCommonAncestor(self, root, p, q):
+    if p.val < root.val > q.val:
+        return self.lowestCommonAncestor(root.left, p, q)
+    if p.val > root.val < q.val:
+        return self.lowestCommonAncestor(root.right, p, q)
+    return root
+    
+"""
+
+# 对于普通二叉树这么做比较靠谱
+"""
+class Solution:
+    def lowestCommonAncestor(self, root, p, q):
+        if root in (None, p, q):
+            return root
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        return root if left and right else (left or right)
+        
+"""
 
 class Solution:
     def lowestCommonAncestor(self, root, p, q):

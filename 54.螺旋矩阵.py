@@ -10,41 +10,29 @@ class Solution:
     def __init__(self):
         self.result = []
     def spiralOrder(self, matrix):
-        self._spiralOrder(matrix)
+        n = len(matrix)
+        if n == 0:
+            return []
+
+        num = 1
+        row_start = 0
+        row_end = n - 1
+        col_start = 0
+        col_end = n - 1
+        while row_start <= row_end and col_start <= col_end:
+            for i in range(col_start, col_end + 1):
+                self.result.append(matrix[row_start][i])
+            row_start += 1
+            for i in range(row_start, row_end + 1):
+                self.result.append(matrix[i][col_end])
+            col_end -= 1
+            for i in range(col_end, col_start - 1, -1):
+                self.result.append(matrix[row_end][i])
+            row_end -= 1
+            for i in range(row_end, row_start-1, -1):
+                self.result.append(matrix[i][col_start])
+            col_start += 1
         return self.result
-    def _spiralOrder(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: List[int]
-        """
-        if len(matrix) == 0:
-            return
-        if len(matrix[0]) == 0:
-            return
-        if len(matrix) == 1:
-            for i in matrix[0]:
-                self.result.append(i)
-            return
-        if len(matrix[0]) == 1:
-            for i in range(len(matrix)):
-                self.result.append(matrix[i])
-            return
-        for i in matrix[0]:
-            self.result.append(i)
-
-
-        for i in range(1, len(matrix)):
-            self.result.append(matrix[i][-1])
-
-        for i in range(len(matrix[-1])-2, -1, -1):
-            self.result.append(matrix[-1][i])
-
-        for i in range(len(matrix) - 2, 0, -1):
-            self.result.append(matrix[i][0])
-
-        for i in range(len(matrix)):
-            matrix[i] = matrix[i][1:-1]
-        self.spiralOrder(matrix[1:-1])
 
 if __name__ == '__main__':
 

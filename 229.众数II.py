@@ -5,6 +5,12 @@
 # @File    : 229.众数II.py
 # @Software: PyCharm
 """
+
+# 这题的trick性依然很强
+
+# 注意初始化的情况
+
+# TODO: check 1
 class Solution:
 
     def majorityElement(self, nums):

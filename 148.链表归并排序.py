@@ -6,6 +6,13 @@
 # @Software: PyCharm
 """
 
+# TODO: check 1
+
+# 注意这里 在找到中点之后， 是先把其断开，然后再连接
+# 归并的思想不错
+
+
+# 快排的思想也很伟大
 
 class Solution:
     def sortList(self, head):
@@ -18,6 +25,7 @@ class Solution:
 
         low = self.findMiddle(head)
         p = low.next
+        # 注意这里是先断开，再连接
         low.next = None
         left = self.sortList(head)
         right = self.sortList(p)

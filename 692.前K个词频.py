@@ -5,6 +5,7 @@
 # @File    : 692.前K个词频.py
 # @Software: PyCharm
 """
+# TODO: check 1
 
 # 这一题好需要 好好整理一下优先队列， 类的比较函数的使用
 import heapq
@@ -46,6 +47,6 @@ class Solution:
         return re[::-1]
 if __name__ == '__main__':
     soliution = Solution()
-    data = ["i", "love", "leetcode", "i", "love", "coding"]
+    data = ["i", "love", "leetcode", "i", "love", "love"]
     k = 2
     print(soliution.topKFrequent(data, k))

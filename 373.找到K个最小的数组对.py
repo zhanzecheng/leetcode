@@ -9,6 +9,8 @@ import heapq
 
 # 这一种解法是使用了堆的数据结构
 # 这里的堆的优先作用会使 最小的值在上面
+
+# TODO: check 1
 def kSmallestPairs( nums1, nums2, k):
     queue = []
     def push(i, j):

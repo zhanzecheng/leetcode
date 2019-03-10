@@ -8,7 +8,7 @@
 
 # 这题好难， 很懵逼
 
-def wiggleSort(self, nums):
+def wiggleSort( nums):
     """
     :type nums: List[int]
     :rtype: void Do not return anything, modify nums in-place instead.
@@ -16,6 +16,9 @@ def wiggleSort(self, nums):
     nums.sort()
 
     half = len(nums[::2]) - 1
+    print(nums)
+    print(nums[half::-1])
+    print(nums[:half:-1])
     nums[::2], nums[1::2] = nums[half::-1], nums[:half:-1]
 if __name__ == '__main__':
     data =  [1, 5,2, 3, 6, 4]

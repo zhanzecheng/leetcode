@@ -7,6 +7,8 @@
 """
 
 # 这一道题递归用的真是好
+# TODO: check 1
+# 用的真是好
 class Solution:
     def countNodes(self, root):
         """

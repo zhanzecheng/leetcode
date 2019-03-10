@@ -10,6 +10,7 @@
 
 # 并且通过matrix建立了邻接矩阵
 # 通过python内置的quene来建立队列，包括 get put qsize方法
+
 from queue import Queue
 class Solution:
     def canFinish(self, numCourses, prerequisites):

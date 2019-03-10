@@ -8,30 +8,7 @@
 """
 这个使用了深度优先的策略来做搜索
 """
-class Solution:
-    def __init__(self):
-        self.data = []
-    def combinationSum(self, candidates, target):
-        """
-        :type candidates: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
-        length = len(candidates)
-        for i in range(length):
-            self._DFS(candidates[i:], target, [candidates[i]].copy())
-        return self.data
 
-    def _DFS(self, candidates, target, result=[]):
-        length = len(candidates)
-        for i in range(length):
-            if sum(result) > target:
-                return
-            if sum(result) == target and result not in self.data:
-                self.data.append(result)
-            tmp = result.copy()
-            tmp.append(candidates[i])
-            self._DFS(candidates[i:], target, tmp)
 
 # TODO：还有一种放在循环外的DFS
 '''
@@ -48,7 +25,7 @@ def dfs(self, nums, target, index, path, res):
     if target == 0:
         res.append(path)
         return 
-    for i in xrange(index, len(nums)):
+    for i in range(index, len(nums)):
         self.dfs(nums, target-nums[i], i, path+[nums[i]], res)
         
 '''

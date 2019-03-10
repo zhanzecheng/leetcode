@@ -6,6 +6,7 @@
 # @Software: PyCharm
 """
 
+# TODO: check 1
 
 class Solution:
     def findUnsortedSubarray(self, nums):
@@ -17,7 +18,7 @@ class Solution:
         if len(nums) == 1:
             return 0
         n = len(nums)
-        # 找到最后一个不减小的和第一个不增加的
+        # 这块理解的不对的
         begin = -1
         end = -2
         max_one = nums[0]

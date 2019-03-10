@@ -5,7 +5,8 @@
 # @File    : 60.第n个排列序列.py
 # @Software: PyCharm
 """
-
+# 这一题很有意思，难度也很高，思路也很好
+# TODO: check 1
 class Solution:
     def __init__(self):
         self.k = 0
@@ -29,7 +30,6 @@ class Solution:
             flag = False
             nn = self._jiecheng(length - count)
             for i in range(len(num) - count + 1, 0, -1):
-                print(i, nn, k)
                 if i * nn < k:
                     k -= i * nn
                     res.append(i)
@@ -40,7 +40,6 @@ class Solution:
             count += 1
             if len(res) == n:
                 break
-
         tmp = []
         for i in res:
             tmp.append(str(num[i]))
@@ -51,4 +50,4 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    print(solution.getPermutation(2, 2))
+    print(solution.getPermutation(4, 9))

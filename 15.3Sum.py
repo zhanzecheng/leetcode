@@ -11,6 +11,8 @@
 首先排序
 在用首尾指针的方法来找数
 '''
+# 注意这个遍历的时候，如果找过了，那么下一次就不用找了
+# TODO: check 1
 
 class Solution:
     def threeSum(self, nums):

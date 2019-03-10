@@ -5,6 +5,10 @@
 # @File    : 55.跳跳游戏.py
 # @Software: PyCharm
 """
+
+# 从后往前遍历， 用dis标示距离，判断是否可以到，最后用nums【0】来判断是否可以到
+
+# TODO: check 1
 class Solution:
     def canJump(self, nums):
         """

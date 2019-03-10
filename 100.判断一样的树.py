@@ -24,6 +24,7 @@ class Solution:
             return False
         if p == None and q == None:
             return True
+        # 简洁明了
         if p.val == q.val:
             if self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right):
                 return True

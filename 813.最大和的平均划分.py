@@ -6,6 +6,7 @@
 # @Software: PyCharm
 """
 
+# 这一题是求平均值的最大值，很适合用动态规划的方法来做
 
 class Solution:
     def largestSumOfAverages(self, A, K):

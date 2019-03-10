@@ -6,6 +6,10 @@
 # @Software: PyCharm
 """
 
+# 注意二叉树一般都是一个乘积的关系，想着一题，还有重构二叉树那题，左右子树都是乘积的关系
+# 这一题还有一个需要注意的就是是采用dict来做保存
+
+# TODO： check 1
 
 class Solution:
     def numFactoredBinaryTrees(self, A):

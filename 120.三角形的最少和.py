@@ -6,6 +6,8 @@
 # @Software: PyCharm
 """
 
+# TODO: check 1
+# 又是一道动态规划的题目
 
 class Solution:
     def minimumTotal(self, triangle):

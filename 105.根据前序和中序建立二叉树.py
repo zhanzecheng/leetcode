@@ -7,9 +7,8 @@
 """
 
 
-# 注意需要区分一次 left和right 的顺序
 class Solution:
-    def buildTree(self, inorder, preorder):
+    def buildTree(self, preorder, inorder):
         """
         :type preorder: List[int]
         :type inorder: List[int]
@@ -19,21 +18,19 @@ class Solution:
             return None
 
         self.preorder = preorder
-        root = TreeNode(self.preorder[-1])
-        self.preorder = self.preorder[:-1]
-        root.right = self.build(inorder[inorder.index(root.val) + 1:])
-
+        root = TreeNode(self.preorder[0])
+        self.preorder = self.preorder[1:]
         root.left = self.build(inorder[:inorder.index(root.val)])
+        root.right = self.build(inorder[inorder.index(root.val) + 1:])
         return root
 
     def build(self, inorder):
         if self.preorder == [] or inorder == []:
             return None
 
-        root = TreeNode(self.preorder[-1])
-        self.preorder = self.preorder[:-1]
-        root.right = self.build(inorder[inorder.index(root.val) + 1:])
-
+        root = TreeNode(self.preorder[0])
+        self.preorder = self.preorder[1:]
 
         root.left = self.build(inorder[:inorder.index(root.val)])
+        root.right = self.build(inorder[inorder.index(root.val) + 1:])
         return root

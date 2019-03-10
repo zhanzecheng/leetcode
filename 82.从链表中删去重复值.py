@@ -14,6 +14,38 @@ class ListNode:
         self.next = None
 
 
+
+
+class Solution:
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        if not head or not head.next:
+            return head
+
+        dummy = ListNode(head.val - 1)
+        dummy.next = head
+        cur = dummy
+        flag = False
+        head = dummy
+        while cur and cur.next != None:
+            begin = cur.next
+            while begin and begin.next and begin.val == begin.next.val:
+                begin = begin.next
+                flag = True
+
+            if flag:
+                cur.next = begin
+                flag = False
+            else:
+                cur = begin.next
+        return head.next
+
+
+
+
 class Solution:
     def deleteDuplicates(self, head):
         """

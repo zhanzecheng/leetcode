@@ -9,6 +9,9 @@
 这个解析的可是真的很神奇
 '''
 
+# 这个使用递归的方式来写很神奇
+# TODO：check 1
+
 class Solution:
     def fourSum(self, nums, target):
         """

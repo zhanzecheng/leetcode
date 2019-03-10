@@ -6,7 +6,7 @@
 # @Software: PyCharm
 """
 # 这一题其实是一种hash表的思路
-
+# 这里的时间复杂度是o(n2) 两个二重循环
 class Solution:
     def fourSumCount(self, A, B, C, D):
         """

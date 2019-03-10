@@ -5,6 +5,10 @@
 # @File    : 114.压平树.py
 # @Software: PyCharm
 """
+# 其实这个解法充满了trick
+
+# TODO: check 1
+
 class Solution:
     def flatten(self, root):
         """

@@ -6,6 +6,10 @@
 # @Software: PyCharm
 """
 
+# 这题是一个范围的与运算
+
+# trick味十足
+# TODO: check 1
 
 class Solution(object):
     def rangeBitwiseAnd(self, m, n):
@@ -19,6 +23,7 @@ class Solution(object):
             m = m >> 1
             n = n >> 1
             result = result << 1
+
 
         return result * m
 

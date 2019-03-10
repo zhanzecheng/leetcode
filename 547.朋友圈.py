@@ -7,6 +7,7 @@
 """
 
 # 考察的核心点还是 连通图 dfs visit标识矩阵
+# 这一题的难度是简单的
 
 class Solution:
     def findCircleNum(self, M):

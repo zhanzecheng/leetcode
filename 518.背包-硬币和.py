@@ -12,6 +12,10 @@ using the ith coin, since we can use unlimited same coin, we need to know how ma
 
 '''
 
+# 这里的dp[i][j]代表着target是j并且只用前i个能达成的个数
+# 有状态转移方程 : dp[i][j] = dp[i-1][j] + dp[i][j- nums[i]]
+# TODO: check 1
+# 注意这一题和可以重复使用的那题的不同
 class Solution(object):
     def change(self, amount, coins):
         """
@@ -32,6 +36,6 @@ class Solution(object):
         return dp[len(coins)][amount]
 if __name__ == '__main__':
     solution = Solution()
-    amount = 5
-    coins = [1, 2, 5]
+    amount = 4
+    coins = [1, 2, 3]
     print(solution.change(amount, coins))

@@ -6,6 +6,9 @@
 # @Software: PyCharm
 """
 
+# 这道题使用dfs来暴力搜索解决
+
+# TODO: check 1
 
 class Solution:
     def partition(self, s):
@@ -13,20 +16,20 @@ class Solution:
         :type s: str
         :rtype: List[List[str]]
         """
-        self.result = []
-        self.dfs(s, [])
-        return self.result
+        re = []
 
-    def dfs(self, s, t):
-        if len(s) == 0:
-            self.result.append(t.copy())
-            return
-        for i in range(0, len(s)):
-            if s[:i+1] == s[:i+1][::-1]:
-                t.append(s[:i+1])
-                self.dfs(s[i+1:], t)
-                # dfs的pop
-                t.pop()
+        def dfs(string, path):
+            if len(string) == 0:
+                re.append(path)
+                return
+
+            for i in range(len(string)):
+                # 注意这里的i+1
+                if string[:i + 1] == string[:i + 1][::-1]:
+                    dfs(string[i + 1:], path + [string[:i + 1]])
+
+        dfs(s, [])
+        return re
 
 if __name__ == '__main__':
     solution = Solution()

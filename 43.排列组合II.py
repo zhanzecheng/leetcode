@@ -40,4 +40,4 @@ class Solution:
 if __name__ == '__main__':
     solution = Solution()
     data = [1, 1, 3]
-    print(solution.permute(data))
+    print(solution.permuteUnique(data))

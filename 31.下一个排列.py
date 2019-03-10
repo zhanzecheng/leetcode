@@ -5,6 +5,9 @@
 # @File    : 31.下一个排列.py
 # @Software: PyCharm
 """
+# 这题一样 技巧性很强
+
+# TODO： check 1
 
 class Solution(object):
     def nextPermutation(self, nums):

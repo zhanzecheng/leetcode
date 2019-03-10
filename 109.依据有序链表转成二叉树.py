@@ -9,6 +9,7 @@
 # 具体思路: 每一次找中间， 然后递归的建立左右子树
 
 # 做了半天。。。。。。
+# TODO: check 1
 
 class Solution:
     def sortedListToBST(self, head):

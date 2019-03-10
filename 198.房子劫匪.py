@@ -6,6 +6,7 @@
 # @Software: PyCharm
 """
 
+# TODO: check 1 max(dp[i-2], dp[i-3)
 
 class Solution:
     def rob(self, nums):

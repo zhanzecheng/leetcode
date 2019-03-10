@@ -7,6 +7,8 @@
 """
 
 # 又是一道DFS的题目
+# 这一题是一个很好的dfs例题
+# 这确实是一道很好的dfs的题目
 
 class Solution:
     def restoreIpAddresses(self, s):
@@ -24,6 +26,7 @@ class Solution:
                 self.result.append(res[:-1])
             return
 
+        # 这一题唯一需要注意的就是边界
         for i in range(1, 4):
             if i <= len(s):
                 if i == 2:

@@ -19,8 +19,9 @@ class Solution:
         self.preorder = preorder
         root = TreeNode(self.preorder[-1])
         self.preorder = self.preorder[:-1]
-        root.left = self.build(inorder[:inorder.index(root.val)])
         root.right = self.build(inorder[inorder.index(root.val) + 1:])
+
+        root.left = self.build(inorder[:inorder.index(root.val)])
         return root
 
     def build(self, inorder):
@@ -29,7 +30,8 @@ class Solution:
 
         root = TreeNode(self.preorder[-1])
         self.preorder = self.preorder[:-1]
+        root.right = self.build(inorder[inorder.index(root.val) + 1:])
+
 
         root.left = self.build(inorder[:inorder.index(root.val)])
-        root.right = self.build(inorder[inorder.index(root.val) + 1:])
         return root

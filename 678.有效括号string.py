@@ -7,7 +7,11 @@
 """
 
 # 来回遍历两次
+# 需要左右两边进行夹击
 
+# 用了两个堆栈的方法
+
+# TODO: check 1
 class Solution:
     def checkValidString(self, s):
         """
@@ -20,6 +24,23 @@ class Solution:
             if i == '*':
                 list2.append(i)
             elif i == ')':
+                list1.append(')')
+            else:
+                if len(list1) > 0:
+                    list1.pop()
+                else:
+                    if len(list2) > 0:
+                        list2.pop()
+                    else:
+                        return False
+        flag1 = len(list1) <= len(list2)
+
+        list1 = []
+        list2 = []
+        for i in s:
+            if i == '*':
+                list2.append(i)
+            elif i == '(':
                 list1.append('(')
             else:
                 if len(list1) > 0:
@@ -29,8 +50,9 @@ class Solution:
                         list2.pop()
                     else:
                         return False
-        print(list1, list2)
-        return len(list1) <= len(list2)
+        flag2 = len(list1) <= len(list2)
+        return flag2 and flag1
+
 
 if __name__ == '__main__':
     solution = Solution()

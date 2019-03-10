@@ -7,6 +7,8 @@
 """
 
 
+# 这一题其实很厉害，[0, a] - [0, b] = [a, b] 来找个数
+
 class Solution:
     def subarraySum(self, nums, k):
         """

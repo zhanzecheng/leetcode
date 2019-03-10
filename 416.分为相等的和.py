@@ -7,6 +7,9 @@
 """
 
 # 又是一个背包问题
+# 这是一个选或者不选的问题， 我们可以使用背包的思想， true false的思想来解决它
+
+# TODO: check 1
 class Solution:
     def canPartitionKSubsets(self, nums_, k=2):
         """
